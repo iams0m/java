@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class DB연결테스트 {
+public class MemberDAO {
 
-	public static void main(String[] args) {
+	public void insert(){
 
 		try {
 			// 1.오라클 11g와 연결한 부품 설정
@@ -29,13 +29,13 @@ public class DB연결테스트 {
 			//SQL부품으로 만들어주어야 함.
 			//PreparedStatement가 SQL부품!
 			
-			String sql = "insert into hr.MEMBER values ('win3','win3','win3','win3')";
+			String sql = "insert into hr.MEMBER values ('win4','win4','win4','win4')";
 			PreparedStatement ps = con.prepareStatement(sql);
 			//con부품으로 sql스트링에 있는 것 SQL부품으로 만들어주세요.
 			System.out.println("3.SQL문 부품(객체)으로 만들어주기.");
 			
 			ps.executeUpdate();
-			System.out.println("4. SQL문 오라클로 보내기 성공.");
+			System.out.println("4.SQL문 오라클로 보내기 성공.");
 
 		} catch (Exception e) {
 			e.printStackTrace();
