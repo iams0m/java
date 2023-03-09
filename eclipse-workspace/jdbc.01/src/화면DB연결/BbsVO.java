@@ -18,8 +18,8 @@ public class BbsVO {
 		return no;
 	}
 
-	public void setNo(int no) {
-		this.no = no;
+	public void setNo(int no2) {
+		this.no = no2;
 	}
 
 	public String getContent() {
