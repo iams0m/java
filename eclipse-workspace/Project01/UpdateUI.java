@@ -27,7 +27,7 @@ public class UpdateUI {
 
 		JFrame f = new JFrame();
 		f.getContentPane().setBackground(Color.white);
-		f.setTitle("개인회원가입");
+		f.setTitle("회원정보수정");
 		f.setSize(500, 600);
 		f.getContentPane().setLayout(null);
 
@@ -87,7 +87,7 @@ public class UpdateUI {
 		b1.setBackground(Color.black);
 		b1.setForeground(Color.white);
 		f.getContentPane().add(b1);
-		//id,pw,
+
 		b1.addActionListener(new ActionListener() {
 
 			@Override
@@ -108,17 +108,6 @@ public class UpdateUI {
 				bag.setBirth(birth);
 				bag.setTel(tel);
 
-//				if (result == 1) {
-//					int reply = JOptionPane.showConfirmDialog(f, "회원탈퇴를 진행하시겠습니까?", "Confirm Message",
-//							JOptionPane.YES_NO_OPTION);
-//					if (reply == JOptionPane.YES_OPTION) {
-//						JOptionPane.showMessageDialog(f, "회원탈퇴가 완료되었습니다. 이용해주셔서 감사합니다!");
-//						System.exit(0);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(f, "회원탈퇴 실패! 다시 입력 해주세요.");
-//				}
-				
 				int reply = JOptionPane.showConfirmDialog(f, "회원탈퇴를 진행하시겠습니까?", "Confirm Message",
 						JOptionPane.YES_NO_OPTION);
 				if (reply == JOptionPane.YES_OPTION) {
@@ -151,7 +140,6 @@ public class UpdateUI {
 				String tel = t5.getText();
 
 				JoinDAO dao = new JoinDAO();
-
 				JoinVO bag = new JoinVO();
 				bag.setId(id);
 				bag.setPw(pw);
